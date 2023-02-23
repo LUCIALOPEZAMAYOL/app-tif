@@ -1,0 +1,35 @@
+<div class="containeer">
+  <div class="box">
+    <div>
+      <h2>Bienvenido a mi TIF</h2>
+    </div>
+    <div>
+      <form>
+        <div>
+          <label class="form-label">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            placeholder="ejemplo@gmail.com"/>
+        </div>
+        <div>
+          <label class="form-label" >Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="********"
+          />
+        </div>
+        <input class="submit" type="submit" value="Iniciar Sesión" />
+      </form>
+      <a href="">¿Has olvidado la contraseña?</a>
+    </div>
+    <hr />
+    <div class="box-register">
+      <p>¿No tienes cuenta?</p>
+      <button class="btn-display-register" type="button" routerLinkActive="active" [routerLink]="['/register']" >Registrese</button>
+    </div>
+  </div>
+</div>

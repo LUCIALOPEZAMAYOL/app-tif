@@ -1,0 +1,30 @@
+div{
+  div{
+    div{
+      max-height: 270px;
+      img{
+        max-height: 470px;
+      }
+    }
+  }
+  button{
+    background-color: #12649c;
+    opacity: 0.2;
+    width: 2em;
+  }
+}
+
+
+@media screen and (min-width: 30em) {
+  div{
+    div{
+      div{
+        max-height: 450px;
+        img{
+          height: 90%;
+        }
+      }
+    }
+  }
+
+}

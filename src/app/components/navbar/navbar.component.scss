@@ -1,0 +1,48 @@
+nav.color{
+  background-color: #12649c;
+  .logo{
+    img{
+      width: 50px;
+    }
+  }
+  button.btn-mi-tif{
+    outline: solid #c1ff72;
+    color: #c1ff72;
+    margin-right: 50px;
+  }
+  .box-search{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 12px;
+    width: 15em;
+    height: 2.3em;
+    outline: solid #c1ff72;
+
+    .search{
+      outline: none;
+      border: 0;
+      background-color: transparent;
+
+    }
+    .search::placeholder{
+      color:#c1ff72;
+      opacity: 0.2;
+    }
+    a{
+      img{
+        width: 20px;
+      }
+    }
+  }
+  .collapse{
+    ul{
+      li{
+        a{
+          color: #c1ff72;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+div.containeer{
+  color: #12649c;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../assets/images/fondo_login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  .box{
+    padding: 2em;
+    border: solid #c1ff72;
+    border-radius: 2em;
+    div{
+      h2{
+        font-weight: bold;
+      }
+    }
+    div{
+      form{
+        div{
+          label{
+            font-weight: bold;
+          }
+          input.form-control{
+            background-color: transparent;
+            border: 0;
+            border-bottom: solid #c1ff72;
+        }
+          input.form-control:focus{
+              border-color: transparent;
+              outline: 0;
+              box-shadow: none;
+          }
+        }
+        input.submit{
+          width: 350px;
+          padding: 0.2em;
+          border-radius: .5em;
+          margin-top: .8em;
+          border: 0;
+          background-color: #12649c;
+          color: #c1ff72;
+        }
+      }
+      a{
+        display: block;
+        margin-top: 0.8em;
+        color: #12649c;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    div.box-register{
+      .btn-display-register{
+        width: 350px;
+        padding: 0.2em;
+        border-radius: .5em;
+        border: 0;
+        background-color: #12649c;
+        color: #c1ff72;
+    }
+    }
+  }
+}
+
+/* @media screen and (min-width: 30em) {
+  div{
+  }
+
+}
+ */
