@@ -10,7 +10,7 @@ export class LoginComponent {
 
   formLogin = this.formBuilder.group({
     email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.required]]
+    password: ['', [Validators.required, Validators]]
   })
 
   constructor(
