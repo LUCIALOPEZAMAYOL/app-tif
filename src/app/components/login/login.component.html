@@ -4,7 +4,7 @@
       <h2>Bienvenido a mi TIF</h2>
     </div>
     <div>
-      <form>
+      <form [formGroup]="formLogin" (ngSubmit)="login()" novalidate>
         <div>
           <label class="form-label">Email</label>
           <input
