@@ -1,0 +1,23 @@
+div.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3em;
+  column-gap: 20px;
+  div.container1{
+    padding: 1em;
+    border: solid #c1ff72;
+    border-radius: 1em;
+    p, h1{
+      color: #12649c;
+    }
+
+    .cantidad{
+      display: block;
+      color: #12649c;
+      position: absolute;
+      margin-left: 7.5em;
+      margin-top: 1.5em;
+      font-size: 2em;
+    }
+  }
+}

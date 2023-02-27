@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<div class="container">
+  <h4>Nuevo Producto</h4>
+  <form [formGroup]="formEditUser" (ngSubmit)="updateUser()" novalidate>
+    <div>
+      <label class="form-label" >Tipo de documento</label>
+      <select class="form-select" aria-label="Default select example" formControlName="documentType">
+        <option *ngFor="let docType of documentsType" [ngValue]="docType">{{docType}}</option>
+      </select>
+    </div>
+    <div>
+      <label class="form-label" >Numero de documento</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="documentNumber"
+      />
+    </div>
+    <div>
+      <label class="form-label" >Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+      />
+    </div>
+    <div>
+      <label class="form-label" >Apellidos</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="lastName"
+      />
+    </div>
+    <div>
+      <label class="form-label" >Rol</label>
+      <select class="form-select" aria-label="Default select example" formControlName="rol">
+        <option *ngFor="let rol of roles" [ngValue]="rol">{{rol}}</option>
+      </select>
+    </div>
+    <button type="submit">Guardar</button>
+    <button type="button" (click)="cancel()">Cancelar</button>
+  </form>
+</div>
+

@@ -102,8 +102,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "FIT:build:production",
+            "firebaseProject": "app-tif",
+            "firebaseHostingSite": "app-tif"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a href="" class="navbar-brand logo">
+      <img src="../../../assets/images/logo.png" width="50" alt="logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/dashboard-admin']" href="#">Dashboard</a>
+        </li>
+        <li *ngIf="rolGlobal=='ADMINISTRADOR'" class="nav-item">
+          <a class="nav-link active" [routerLink]="['/usuarios']" href="#">Usuarios</a>
+        </li>
+        <li *ngIf="rolGlobal=='ADMINISTRADOR'" class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/productos']">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/ventas']">Ventas</a>
+        </li>
+      </ul>
+    </div>
+    <div class="box-user">
+      <div>
+        <a class="user-saludo">Hola </a>
+        <img src="../../../assets/images/flechita.svg" alt="">
+      </div>
+      <button type="button" class="" (click)="logout()">
+        <img src="../../../assets/images/logout.svg" alt="">
+      </button>
+    </div>
+  </div>
+</nav>
+

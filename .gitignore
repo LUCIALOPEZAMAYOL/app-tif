@@ -27,7 +27,8 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
-
+#intellij
+.idea/*
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -40,3 +41,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

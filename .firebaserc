@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app-tif": {
+      "hosting": {
+        "FIT": [
+          "app-tif"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app-tif"
+  }
+}

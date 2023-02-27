@@ -1,0 +1,64 @@
+div.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 60em;
+    .box-cliente{
+      margin: 0.7em;
+      select{
+        width: 20em;
+      }
+    }
+    .box-product{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      div{
+        margin: 0.7em;
+      }
+      div.cantidad{
+        label{
+          margin: 0;
+        }
+        div{
+          display: flex;
+          flex-direction: row;
+          input{
+            margin: 0 0.5em 0 0.5em;
+          }
+          button{
+            border: 0;
+            border-radius: 2px;
+          }
+        }
+      }
+      div.agregar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button{
+          border: 0;
+          background-color: transparent;
+          img{
+            width: 30px;
+          }
+        }
+      }
+    }
+    div.btns{
+      padding: 2em;
+      margin-bottom: 2em;
+      button{
+        padding: .5em;
+        border-radius: .5em;
+        margin-left: 2em;
+        border: 0;
+        background-color: #12649c;
+        color: #c1ff72;;
+      }
+    }
+  }
+}

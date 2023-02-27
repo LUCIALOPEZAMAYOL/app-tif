@@ -1,0 +1,48 @@
+div.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 2em;
+  width: 100%;
+  .container-add-product{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h4{
+    margin-bottom: .5em;
+    margin-right: 21em;
+  }
+  form{
+    display: grid;
+    row-gap: 1em;
+    div{
+      input, select{
+        width: 20em;
+      }
+      input:focus{
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    div.box-data-product{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 15px;
+    }
+    div.box-btn{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 15px;
+      button{
+        border: 0;
+        background-color: #12649c;
+        color: #c1ff72;;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

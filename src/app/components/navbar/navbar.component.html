@@ -6,10 +6,10 @@
     <button class="navbar-toggler" type="button">
       <img src="../../../assets/images/icon_menu.svg" alt="menu" />
     </button>
-    <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse container" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Equipos</a>
+          <a class="nav-link active" [routerLink]="['/equipos']">Equipos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Planes</a>
@@ -21,16 +21,25 @@
       <div class="box-search container-fluid">
         <input class="search" type="text" placeholder="Buscar" />
         <a href="">
-          <img src="../../../assets/images/buscar.png" alt="" />
+          <img src="../../../assets/images/search.svg" alt="" />
         </a>
       </div>
-      <button class="btn btn-mi-tif" [routerLink]="['/login']">Mi TIF</button>
       <a class="navbar-brand" href="">
         <img
           src="../../../assets/images/icon_shopping_cart.svg"
           alt="shopping_car"
         />
       </a>
+      <button *ngIf="!statesLogin" class="btn btn-mi-tif" [routerLink]="['/login']">Mi TIF</button>
+      <div *ngIf="statesLogin">
+        <div class="box-else">
+          <a class="user-saludo">Hola</a>
+          <img src="../../../assets/images/flechita.svg" alt="">
+          <button type="button" class="" (click)="logout()">
+            <img src="../../../assets/images/logout.svg" alt="">
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

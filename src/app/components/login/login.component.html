@@ -5,13 +5,19 @@
     </div>
     <div>
       <form [formGroup]="formLogin" (ngSubmit)="login()" novalidate>
+        <div *ngIf="loginErrorState">
+          <p class="text-danger" >Usuario y/o contraseña incorrectos</p>
+        </div>
         <div>
           <label class="form-label">Email</label>
           <input
             type="text"
             class="form-control"
             formControlName="email"
-            placeholder="ejemplo@gmail.com"/>
+            placeholder="ejemplo@gmail.com"
+            [class.is-invalid]="emailNoValido"
+            />
+            <small class="text-danger" *ngIf="emailNoValido">Campo requerido</small>
         </div>
         <div>
           <label class="form-label" >Contraseña</label>
@@ -20,7 +26,9 @@
             class="form-control"
             formControlName="password"
             placeholder="********"
+            [class.is-invalid]="passwordNoValido"
           />
+          <small class="text-danger" *ngIf="passwordNoValido">Campo requerido</small>
         </div>
         <input class="submit" type="submit" value="Iniciar Sesión" />
       </form>

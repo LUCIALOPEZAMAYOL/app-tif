@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class="products-grid">
+  <app-producto
+  *ngFor="let product of allProducts"
+  [myProduct]="product"
+  >
+  </app-producto>
+</div>

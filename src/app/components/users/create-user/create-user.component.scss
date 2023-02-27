@@ -1,0 +1,30 @@
+div.container{
+  display: flex;
+  max-height: 100vh;
+  padding: .5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h4{
+    margin-bottom: .5em;
+  }
+  form{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    column-gap: 10px;
+    row-gap: 1em;
+    div{
+      input:focus{
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    button{
+      padding: .5em;
+      border-radius: .5em;
+      border: 0;
+      background-color: #12649c;
+      color: #c1ff72;;
+    }
+  }
+}

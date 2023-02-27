@@ -1,0 +1,106 @@
+<app-nav></app-nav>
+<div class="container">
+  <div class="container-new-sale">
+    <h4>Nuevo Producto</h4>
+    <form [formGroup]="formNewSale" (ngSubmit)="generateSale()">
+      <div class="box-cliente">
+        <label class="form-label">Cliente</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="cliente"
+        >
+          <option selected>Cliente</option>
+          <option *ngFor="let user of users" [value]="user">{{ user }}</option>
+        </select>
+      </div>
+      <div class="box-product">
+        <div>
+          <label class="form-label">Producto</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="producto"
+          >
+            <option selected>Producto</option>
+            <option *ngFor="let product of products" [value]="product.title">
+              {{ product.title }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <label class="form-label">Stock</label>
+          <input type="number" class="form-control" formControlName="stock" />
+        </div>
+        <div class="cantidad">
+          <label class="form-label">Cantidad</label>
+          <div>
+            <button type="button">+</button>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="cantidad"
+            />
+            <button type="button">-</button>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Precio</label>
+          <input type="number" class="form-control" formControlName="precio" />
+        </div>
+        <div>
+          <label class="form-label">Total</label>
+          <input type="number" class="form-control" formControlName="total" />
+        </div>
+        <div class="agregar">
+          <label class="form-label">Agregar</label>
+          <button type="button" (click)="addProductSale()">
+            <img src="../../../../assets/images/plus-circle.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="box-venta">
+        <div class="container table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Codigo</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info" *ngFor="let product of products">
+                <td> {{ product.title }} </td>
+                <td> {{ product.title }} </td>
+                <td></td>
+                <td> {{ product.price }} </td>
+                <td></td>
+                <td>
+                  <button>
+                    <img src="../../../assets/images/pencil.svg" alt="" />
+                  </button>
+                  <button>
+                    <img src="../../../assets/images/delete.svg " alt="" />
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Total a pagar</td>
+                <td>500.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="btns">
+        <button type="submit">Vender</button>
+        <button type="button">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
