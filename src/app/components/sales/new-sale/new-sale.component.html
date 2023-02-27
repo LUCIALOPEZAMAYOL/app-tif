@@ -1,17 +1,17 @@
 <app-nav></app-nav>
 <div class="container">
   <div class="container-new-sale">
-    <h4>Nuevo Producto</h4>
+    <h4>Nueva Venta</h4>
     <form [formGroup]="formNewSale" (ngSubmit)="generateSale()">
       <div class="box-cliente">
         <label class="form-label">Cliente</label>
         <select
           class="form-select"
           aria-label="Default select example"
-          formControlName="cliente"
+          formControlName="client"
         >
           <option selected>Cliente</option>
-          <option *ngFor="let user of users" [value]="user">{{ user }}</option>
+          <option *ngFor="let user of users" [value]="user">{{ user.documentNumber}}  || {{user.name}} {{user.lastName }}</option>
         </select>
       </div>
       <div class="box-product">
@@ -20,11 +20,12 @@
           <select
             class="form-select"
             aria-label="Default select example"
-            formControlName="producto"
+            formControlName="product"
+            (change)="change($event)"
           >
             <option selected>Producto</option>
-            <option *ngFor="let product of products" [value]="product.title">
-              {{ product.title }}
+            <option *ngFor="let product of allProducts" [value]="product.id">
+              {{ product.code }} || {{ product.name }}
             </option>
           </select>
         </div>
@@ -39,14 +40,15 @@
             <input
               type="number"
               class="form-control"
-              formControlName="cantidad"
+              formControlName="amount"
+              (change)="calculateTotalCost()"
             />
             <button type="button">-</button>
           </div>
         </div>
         <div>
           <label class="form-label">Precio</label>
-          <input type="number" class="form-control" formControlName="precio" />
+          <input type="number" class="form-control" formControlName="price" />
         </div>
         <div>
           <label class="form-label">Total</label>
@@ -73,11 +75,11 @@
             </thead>
             <tbody>
               <tr class="table-info" *ngFor="let product of products">
-                <td> {{ product.title }} </td>
-                <td> {{ product.title }} </td>
-                <td></td>
+                <td> {{ product.code }} </td>
+                <td> {{ product.name }} </td>
+                <td>{{ product.amount }}</td>
                 <td> {{ product.price }} </td>
-                <td></td>
+                <td>{{ product.total }}</td>
                 <td>
                   <button>
                     <img src="../../../assets/images/pencil.svg" alt="" />
@@ -91,15 +93,15 @@
             <tfoot>
               <tr>
                 <td colspan="4">Total a pagar</td>
-                <td>500.00</td>
+                <td>{{total}}</td>
               </tr>
             </tfoot>
           </table>
+          <div class="btns">
+            <button type="submit">Vender</button>
+            <button type="button">Cancelar</button>
+          </div>
         </div>
-      </div>
-      <div class="btns">
-        <button type="submit">Vender</button>
-        <button type="button">Cancelar</button>
       </div>
     </form>
   </div>

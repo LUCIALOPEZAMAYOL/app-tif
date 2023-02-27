@@ -1,12 +1,12 @@
 
 export interface ProductData {
   id?: string;
-  code?: String;
-  name?: String;
+  code?: string;
+  name?: string;
   stock?: number;
   price?: number;
   description?: string;
-  image?: String;
+  image?: string;
 
   category: Category;
 
